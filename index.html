@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard Driver Simulation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>⌨️ Keyboard Driver Simulation (OS)</h1>
+        <p class="subtitle">Simulates how OS handles normal & special keys</p>
+
+        <div class="card">
+            <div class="output-title">
+                <span>👥 Press any key below:</span>
+            </div>
+            <input type="text" id="keyInput" placeholder="Click here and start typing" autofocus>
+        </div>
+
+        <div class="output-grid">
+            <div class="card">
+                <div class="output-title">
+                    <span>⚡ Live Output</span>
+                    <span class="listening">Listening...</span>
+                </div>
+                <div class="output-row">
+                    <span>🔑 Key:</span>
+                    <span class="badge" id="keyName">-</span>
+                </div>
+                <div class="output-row">
+                    <span>📟 Scan Code:</span>
+                    <span class="badge" id="scanCode">-</span>
+                </div>
+                <div class="output-row">
+                    <span>📋 Type:</span>
+                    <span class="badge" id="keyType">-</span>
+                </div>
+                <div class="output-row">
+                    <span>👤 Message:</span>
+                    <span id="keyMessage">Waiting for input...</span>
+                </div>
+                <div class="output-row">
+                    <span>🕒 Time:</span>
+                    <span id="keyTime">-</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="output-title">
+                    <span>📝 Key Log</span>
+                    <button id="clearBtn">🗑️ Clear</button>
+                </div>
+                <div id="keyLog"></div>
+            </div>
+        </div>
+
+        <div class="special-keys">
+            <p>✨ <strong>Try Special Keys</strong></p>
+            <button>Enter ↵</button>
+            <button>Shift ⇧</button>
+            <button>Backspace ⌫</button>
+            <button>Space</button>
+            <button>Ctrl</button>
+            <button>Alt</button>
+        </div>
+
+        <div class="how-it-works">
+            <p>💡 <strong>How it works:</strong></p>
+            <p class="flow">Key Pressed → Scan Code Generated → Driver Processes → OS Converts → Output Displayed</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
